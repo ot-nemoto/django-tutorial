@@ -31,12 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
+    "django.contrib.admin",  # The admin site.
+    "django.contrib.auth",  # An authentication system.
+    "django.contrib.contenttypes",  # A framework for content types.
+    "django.contrib.sessions",  # A session framework.
+    "django.contrib.messages",  # A messaging framework.
+    "django.contrib.staticfiles",  # A framework for managing static files.
+    "polls.apps.PollsConfig",
 ]
 
 MIDDLEWARE = [
@@ -76,11 +77,11 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        'HOST': "db",
-        'PORT': 3306,
-        'NAME': "some_db",
-        'USER': "someone",
-        'PASSWORD': "password",
+        "HOST": "db",
+        "PORT": 3306,
+        "NAME": "some_db",
+        "USER": "someone",
+        "PASSWORD": "password",
     }
 }
 
