@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace/django-tutorial/:cached
+    tty: true
+
+  db:
+    image: mysql:8.0
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: some_db
+      MYSQL_USER: someone
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../data/db:/var/lib/mysql
