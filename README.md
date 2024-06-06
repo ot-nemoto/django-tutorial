@@ -8,6 +8,8 @@
 python manage.py runserver
 ```
 
+_http://127.0.0.1:8000/polls/_
+
 ### Writing your first Django app, part 2
 
 ```sh
@@ -93,3 +95,5 @@ python manage.py createsuperuser
   # Password (again):
   # Superuser created successfully.
 ```
+
+_http://127.0.0.1:8000/admin/_
