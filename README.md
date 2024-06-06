@@ -82,3 +82,14 @@ python manage.py migrate
 ```sh
 python manage.py shell
 ```
+
+管理ユーザー作成
+
+```sh
+python manage.py createsuperuser
+  # Username (leave blank to use 'vscode'):
+  # Email address:
+  # Password:
+  # Password (again):
+  # Superuser created successfully.
+```
