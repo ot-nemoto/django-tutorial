@@ -5,10 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python デバッガー: Django",
+            "name": "runserver",
             "type": "debugpy",
             "request": "launch",
             "args": ["runserver"],
+            "django": true,
+            "autoStartBrowser": false,
+            "program": "${workspaceFolder}/manage.py"
+        },
+        {
+            "name": "test polls",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["test", "polls"],
             "django": true,
             "autoStartBrowser": false,
             "program": "${workspaceFolder}/manage.py"
