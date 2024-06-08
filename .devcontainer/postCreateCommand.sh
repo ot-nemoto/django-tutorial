@@ -1,0 +1,1 @@
+echo 'GRANT ALL PRIVILEGES ON `test\_some\_db`.* TO `someone`@`%`' | mysql -hdb -uroot -ppassword
