@@ -97,3 +97,43 @@ python manage.py createsuperuser
 ```
 
 _http://127.0.0.1:8000/admin/_
+
+### Writing your first Django app, part 5
+
+テスト実行
+
+```sh
+python manage.py test polls
+```
+
+カバレッジ取得
+
+```sh
+coverage run --source='.' manage.py test polls
+
+# Report
+coverage report
+  # Name                               Stmts   Miss  Cover
+  # ------------------------------------------------------
+  # manage.py                             11      2    82%
+  # mysite/__init__.py                     0      0   100%
+  # mysite/asgi.py                         4      4     0%
+  # mysite/settings.py                    18      0   100%
+  # mysite/urls.py                         3      0   100%
+  # mysite/wsgi.py                         4      4     0%
+  # polls/__init__.py                      0      0   100%
+  # polls/admin.py                         3      0   100%
+  # polls/apps.py                          4      0   100%
+  # polls/migrations/0001_initial.py       6      0   100%
+  # polls/migrations/__init__.py           0      0   100%
+  # polls/models.py                       17      2    88%
+  # polls/tests.py                        57      0   100%
+  # polls/urls.py                          4      0   100%
+  # polls/views.py                        29      8    72%
+  # ------------------------------------------------------
+  # TOTAL                                160     20    88%
+
+# HTML report
+coverage html
+  # Wrote HTML report to htmlcov/index.html
+```
