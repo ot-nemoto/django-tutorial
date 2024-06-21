@@ -12,5 +12,9 @@
     },
     "[markdown]": {
         "prettier.tabWidth": 2
+    },
+    "[html]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": null
     }
 }
