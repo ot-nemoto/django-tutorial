@@ -1,3 +1,4 @@
 django
 mysqlclient
 coverage
+django-debug-toolbar

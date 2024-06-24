@@ -137,3 +137,36 @@ coverage report
 coverage html
   # Wrote HTML report to htmlcov/index.html
 ```
+
+### Writing your first Django app, part 8
+
+**django-debug-toolbar**
+
+_settings.py_
+
+```python
+INSTALLED_APPS = [
+    ...
+    'debug_toolbar',
+]
+
+MIDDLEWARE = [
+    ...
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+]
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
+```
+
+_urls.py_
+
+```python
+from django.urls import path, include
+
+urlpatterns = [
+    ...
+    path('__debug__/', include('debug_toolbar.urls')),
+]
+```
