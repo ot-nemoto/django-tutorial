@@ -142,7 +142,7 @@ coverage html
 
 **django-debug-toolbar**
 
-_settings.py_
+_mysite/settings.py_
 
 ```python
 INSTALLED_APPS = [
@@ -160,7 +160,7 @@ INTERNAL_IPS = [
 ]
 ```
 
-_urls.py_
+_mysite/urls.py_
 
 ```python
 from django.urls import path, include
@@ -168,5 +168,38 @@ from django.urls import path, include
 urlpatterns = [
     ...
     path('__debug__/', include('debug_toolbar.urls')),
+]
+```
+
+### 高度なチュートリアル: 再利用可能アプリの書き方
+
+パッケージをビルド
+
+```sh
+cd django-polls
+python setup.py sdist
+```
+
+パッケージをインストール
+
+```sh
+python -m pip install --user django-polls/dist/django-polls-0.1.tar.gz
+```
+
+_mysite/settings.py_
+
+```python
+INSTALLED_APPS = [
+    "django_polls.apps.PollsConfig",
+    ...,
+]
+```
+
+_mysite/urls.py_
+
+```python
+urlpatterns = [
+    path("polls/", include("django_polls.urls")),
+    ...,
 ]
 ```

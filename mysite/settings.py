@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",  # A session framework.
     "django.contrib.messages",  # A messaging framework.
     "django.contrib.staticfiles",  # A framework for managing static files.
-    "polls.apps.PollsConfig",
+    "django_polls.apps.PollsConfig",
     "debug_toolbar",
 ]
 
